@@ -1,0 +1,13 @@
+version: '3'
+services:
+  php-app:
+    build: .
+    environment:
+      - RABBITMQ_HOST=baboon.rmq.cloudamqp.com
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=pbrqojfq
+      - RABBITMQ_PASSWORD=ZGuYc9a2BmyKuJGyqC--PyZCzxpmtcuZ
+      - RABBITMQ_VHOST=pbrqojfq
+    volumes:
+      - ../project:/app
+    tty: true
